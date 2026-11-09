@@ -19,11 +19,10 @@ SELECT
     WHEN levels_completed_d0 = 0  THEN '0'
     WHEN levels_completed_d0 <= 2 THEN '1-2'
     WHEN levels_completed_d0 <= 5 THEN '3-5'
-    WHEN levels_completed_d0 <= 10 THEN '6-10'
-    ELSE '11+'
-  END                   AS levels_d0,
-  COUNT(*)              AS players,
-  ROUND(AVG(ret_d7), 3) AS ret_d7
+    ELSE '6+'
+  END                         AS levels_d0,
+  COUNT(*)                    AS players,
+  ROUND(AVG(ret_d7) * 100, 1) AS ret_d7_pct
 FROM `YOUR_PROJECT.floodit.mart_user`
 WHERE mature_d7
 GROUP BY levels_d0
