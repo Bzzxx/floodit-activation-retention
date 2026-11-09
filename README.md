@@ -24,7 +24,7 @@ install (day 0)  →  action on day 0  →  returns on day 7?
 ## What I Did
 
 1. **Checked revenue first.** Only 27 purchases ($24.89) in 114 days, too little for LTV or ROAS. So I changed the question from "which players pay" to "which players stay".
-2. **Built one row per installed player** ([`mart_user`](02_mart_user.sql)): install date, country, OS, return on day 1 and day 7, and what they did on day 0.
+2. **Built one row per installed player** ([`mart_user`](sql/02_mart_user.sql)): install date, country, OS, return on day 1 and day 7, and what they did on day 0.
 3. **Compared day-0 actions** by how much they raise day-7 return, and how often they happen.
 4. **Compared countries and OS** on day-1 and day-7 return.
 
@@ -55,13 +55,6 @@ install (day 0)  →  action on day 0  →  returns on day 7?
 2. In each SQL file, replace `YOUR_PROJECT` with your own project ID.
 3. Run the files in order: `01_data_checks` → `02_mart_user` → `03_validation` → `04_analysis`.
 
-## AI Usage
-
-- **Claude:** drafted the SQL and chart script.
-- **Me:** ran every query in BigQuery, fixed the setup error (`Dataset ... was not found in location US`: the dataset had to be created in US, where the public data lives), and checked every number against the query results.
-- **Plan changed by the data:** the first plan was revenue and break-even CPI. My first check showed only $24.89 of revenue, so I switched to retention.
-- **AI mistake caught:** Claude estimated ~1,100 users with more than one traffic source. My coverage query showed 15,175 users, which puts the real number at 26.
-
 ## Stack
 
-`SQL` · `Google BigQuery` · `Python (matplotlib)`
+`SQL` · `Google BigQuery` · `Tableau`
