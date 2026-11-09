@@ -1,6 +1,6 @@
 # What Makes Mobile Players Come Back?
 
-Real Google Analytics 4 data from the mobile game *Flood-It!*, [public in BigQuery](https://developers.google.com/analytics/bigquery/app-gaming-demo-dataset) (`firebase-public-project.analytics_153293282`). [SQL](sql/)
+Real Google Analytics 4 data from the mobile game *Flood-It!*, [public in BigQuery](https://developers.google.com/analytics/bigquery/app-gaming-demo-dataset) (`firebase-public-project.analytics_153293282`).
 
 ## Question
 
@@ -10,7 +10,7 @@ An app pays for ads to get installs, but most players play once and never return
 install (day 0)  →  action on day 0  →  returns on day 7?
 ```
 
-![D7 retention by day-0 levels](docs/activation_d7.png)
+![D7 retention by day-0 levels](activation_d7.png)
 
 ## Data
 
@@ -24,7 +24,7 @@ install (day 0)  →  action on day 0  →  returns on day 7?
 ## What I Did
 
 1. **Checked revenue first.** Only 27 purchases ($24.89) in 114 days, too little for LTV or ROAS. So I changed the question from "which players pay" to "which players stay".
-2. **Built one row per installed player** ([`mart_user`](sql/02_mart_user.sql)): install date, country, OS, return on day 1 and day 7, and what they did on day 0.
+2. **Built one row per installed player** ([`mart_user`](02_mart_user.sql)): install date, country, OS, return on day 1 and day 7, and what they did on day 0.
 3. **Compared day-0 actions** by how much they raise day-7 return, and how often they happen.
 4. **Compared countries and OS** on day-1 and day-7 return.
 
