@@ -1,6 +1,6 @@
 # What Makes Mobile Players Come Back?
 
-Real Google Analytics 4 data from the mobile game *Flood-It!* (public in BigQuery). [SQL](sql/)
+Real Google Analytics 4 data from the mobile game *Flood-It!*, [public in BigQuery](https://developers.google.com/analytics/bigquery/app-gaming-demo-dataset) (`firebase-public-project.analytics_153293282`). [SQL](sql/)
 
 ## Question
 
