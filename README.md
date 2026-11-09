@@ -10,7 +10,7 @@ An app pays for ads to get installs, but most players play once and never return
 install (day 0)  →  action on day 0  →  returns on day 7?
 ```
 
-![D7 retention by day-0 levels](activation_d7.png)
+![D7 retention by day-0 levels](docs/activation_d7.png)
 
 ## Data
 
